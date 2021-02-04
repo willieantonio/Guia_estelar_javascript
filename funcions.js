@@ -248,7 +248,7 @@ console.log(date.__proto__)
 
 
 //
-//	Operadores unários
+//	#Operadores unários
 //	typeof
 //	delete
 //
@@ -262,3 +262,15 @@ delete person.age
 console.log(person)
 
 */
+
+//#Operadores Aritimeticos
+
+//Multiplicação
+//divisão
+//soma
+//subtração
+
+//resto da divição
+//incremento
+//decremento
+//exponencial
