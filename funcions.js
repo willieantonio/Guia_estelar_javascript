@@ -263,14 +263,74 @@ console.log(person)
 
 */
 
+/*
 //#Operadores Aritimeticos
 
-//Multiplicação
-//divisão
-//soma
-//subtração
+//Multiplicação (*)
+console.log("Multiplicação "+ 3.56 * 89.9)
+//divisão (/)
+console.log("Divisão "+ 798 / 54)
+//soma (+)
+console.log("Soma "+ 568 + 895)
+//subtração (-)
+console.log("Subtração "+ (8457 - 786))
 
-//resto da divição
-//incremento
-//decremento
-//exponencial
+//resto da divição (%)
+let remainder 
+remainder = 11 % 10
+console.log("O resto da divisão é "+ remainder)
+
+//incremento (++)
+let increment = 0
+increment++
+increment++
+console.log(increment)
+
+//decremento (--)
+let decrement = 10
+decrement--
+decrement--
+console.log(decrement--)
+
+//exponencial (**)
+console.log(3**2)
+
+*/
+
+
+//Operadores de Comparação
+
+//Ira comparar valores e retornar um Boolean como resposta a comparação
+
+let one = 1
+let two = 2
+
+// ==  igual
+console.log(one == 1)
+console.log(one == "1")
+
+// !=  diferente
+console.log(one != two)
+console.log(one != 1)
+console.log(one != "1")
+
+// === estritamente igual (Deve ser exatamente igual)
+console.log(one === "1") 
+console.log(one === 1)
+
+// !== estritamente diferente
+console.log(two === "2")
+console.log(two === 2)
+
+// >   Maior
+console.log(one > two)
+console.log(two > one)
+
+// >=  Maior igual
+console.log(one >= two)
+console.log(two >= 2)
+
+// <   Menor
+console.log( one < two)
+console.log(two < 2)
+// <=  Menor igual
