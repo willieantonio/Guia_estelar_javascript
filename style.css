@@ -1,0 +1,17 @@
+*{
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* Body =======> */
+body{
+	background: #218d80 
+}
+
+h1{
+	font: bold;
+	font-style: italic;
+	color: rgb(212, 237, 243);
+	position:absolute;
+	border: 0cm;
+		
+}
