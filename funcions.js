@@ -1,487 +1,76 @@
+console.log("Vamos os modulos 9, 10 e 11")
+
+//if ... else (Controle de decisões)
+//let temperature = 36.2
+
+//if (temperature >= 37.5) {
+//    console.log('Febre Alta')
+//}else if(temperature < 37.5 && temperature >= 37){
+//    console.log('Febre Moderada')
+//}else {
+//    console.log('Saudável')
+//}
+
 /*
+let temperature = 37.1
+let hightTemperature = temperature >= 37.5
+let mediumTemperature = temperature < 37.5 && temperature >= 37
 
-
-//function expression
-//function anonymous
-//parâmetros (parameters)
-const sum = function (number1, number2) {
-	total = number1 + number2
-	return total
+if(hightTemperature){
+    console.log('Febre Alta')
+}else if(mediumTemperature){
+    console.log('Febre Moderada')
+}else{
+    console.log('Saldavel')
 }
 
-let number1 = 34
-let number2 = 25
+*/
 
+//switch (cases)
+/*
+function calculate(number1, operator, number2) {
+    let result
 
-console.log(`o número 1 é ${number1}`)
-console.log(`o número 2 é ${number2}`)
-console.log(`a soma é ${sum(number1, number2)}`)
-
-
-//function scope
-
-let subject 
-
-function createThink(){
-	subject = 'study'
-	return subject
+    switch (operator) {
+        case '+':
+            result = number1 + number2
+            break
+        case '-':
+            result = number1 - number2
+            break
+        case '*':
+            result = number1 * number2
+            break
+        case '/':
+            result = number1 / number2
+            break
+        default:
+            console.log('não implementado')
+            break
+    }
+    return result
 }
 
-console.log(subject)
-console.log(createThink())
-console.log(subject)
+console.log(calculate(4, '+', 88))
+
+*/
 
 
-//function hoisting
+//Sobre
+// throw
 
-sayMyName()
-
-function sayMyName(){
-	console.log('Willie')
+function sayMyName(name = ''){
+    if(name === ''){
+        throw 'Nome é Obrigatório'
+    }
+    console.log(name)
 }
 
-
-//arrow function
-
-const sayMyname = () =>{
-	console.log('Willie')
+//try...catch
+try{
+    sayMyName('Willie')
+}catch(e){
+    console.log(e)
 }
 
-sayMyname()
-
-
-//callback function
-//Chamar de volta a função 
-
-function sayMyName(name){
-	console.log(name)
-}
-
-sayMyName(
-	() =>{
-		console.log('Estou em uma Callback')
-	}
-)
-
-
-//Funções construtoras
-
-//	Function() construtor
-
-//	*expressão new
-//	*criar um novo objeto
-//	*this keyword
-
-
-
-
-function Person(name){
-	this.name = name
-	this.walk = function(){
-		return this.name + " está andando"
-	}
-}
-
-const willie = new Person("Willie")
-const jonh = new Person("Jonh")
-console.log(willie.walk())
-console.log(jonh.walk())
-
-
-/*
-
-	Prototype
-
-	*prototype-based language
-	*prototype chaining
-	*__proto__
-
-*/
-
-/*
-	
-	Type Conversion (typecasting) vc Type coersion
-	*Alteração de um tipo de dado para outro tipo
-
-*/
-
-/*
-
-//Manipulando Strings e Números
-
-// Transformando String em Número e Número em String
-
-
-let string = "123"
-console.log(Number(string))
-//let number = 321
-//console.log(String(number))
-
-
-//Manipulando Strings e Números
-
-//Contar quantos caracteres tem uma palavra e quantos digitos tem um número
-
-//let word = "Paralelepipedo"
-//console.log(word.length)
-//let number = 4562585858
-//console.log(String(number).length)
-
-
-//Manipulando Strings e Números
-
-//Transformar um número quebrado em 2 casas decimais 
-//e trocar ponto por vírgula
-
-let number = 11254689.23568
-console.log(number.toFixed(2).replace(".", ","))
-
-
-//Manipulando Strings e Números
-
-//Transforme letras minúsculas em maiúsculas.
-// Faça o contrário disso também
-
-let word = "Programar é muito bom!!"
-console.log(word.toUpperCase()) //Tudo em  Maiúscula
-console.log(word.toLowerCase()) //Tudo em Minúscula
-
-
-
-//Manipulação de Strings
-
-//Verificar se o texto contém a palavra Amor
-
-let pharse = "Eu quero viver o Amor!"
-console.log(pharse.includes("Amor"))
-
-
-//Manipulando Strings e Arrays
-
-//Separe um texto que contem espaços, em um 
-//novo array onde cada texto é uma posição do array.
-//Depois disso , transforme o array em um texto e onde ra espaços, coloque _
-
-let phrase = "Hoje tem café bem quente?"
-let myArray = phrase.split(" ") //Transformando de String em Array
-let phraseWithUnderscore = myArray.join("_") //Transformando de Array em String novamente
-console.log(phraseWithUnderscore.toLowerCase())
-
-//Manipulando Array'
-
-//Criar Array com construtor
-let nubArray = new Array('a', 'b', 'c')
-console.log(nubArray)
-
-//Manipulando Array
-
-//Contar elementos de um Array 
-
-console.log(["a", {type: "array"},
-function() {
-	return "alo"
-},].length)
-
-
-//Manipulando Arrays
-
-//Transformar uma cadeia de caracteres em elementos de um array
-
-let words = "manipulação"
-console.log(Array.from(words))
-
-
-
-//Manipulando Arrays
-
-let techs = ["html", "css", "js"]
-
-//adicionar um item no fim
-techs.push("node.js")
-//adicionar no começo
-techs.unshift("sql")
-//remover do fim
-//techs.pop()
-//remover do começo
-//techs.shift()
-//pegar somente alguns elementos do array
-//console.log(techs.slice(1,3))
-//remover 1 ou mais itens em quelquer posição do arrays
-//techs.splice(1, 2)
-//encontrar a posição de um elemento no array
-let index =  techs.indexOf('css')
-techs.splice(index, 1)
-console.log(index)
-
-
-/*
-	Expressões e Operadores
-
-	--Expressions
-	--Operators
-		Binary
-		Unary
-		Ternary
-*/
-/*
-let number3 = 11
-
-console.log(number3)
-console.log(--number3)
-console.log(++number3)
-console.log(true ? 'alo' : 'nada') //se for true mostre 'alo' se false mostre 'nada'
-
-
-/*
-	New
-		*left-hand-side expression
-		*criar um novo objeto
-*/
-/*
-let name1 = new String('Willie') // nome
-name1.surName = "Antonio" // Sobrenome
-let age1 = new Number(30) //Idade
-console.log(name1, age1)
-
-let date = new Date('2021-11-02')
-console.log(date.__proto__)
-
-
-//
-//	#Operadores unários
-//	typeof
-//	delete
-//
-
-const person = {
-	name: 'willie',
-	age: 25,
-}
-delete person.age
-
-console.log(person)
-
-*/
-
-/*
-//#Operadores Aritimeticos
-
-//Multiplicação (*)
-console.log("Multiplicação "+ 3.56 * 89.9)
-//divisão (/)
-console.log("Divisão "+ 798 / 54)
-//soma (+)
-console.log("Soma "+ 568 + 895)
-//subtração (-)
-console.log("Subtração "+ (8457 - 786))
-
-//resto da divição (%)
-let remainder 
-remainder = 11 % 10
-console.log("O resto da divisão é "+ remainder)
-
-//incremento (++)
-let increment = 0
-increment++
-increment++
-console.log(increment)
-
-//decremento (--)
-let decrement = 10
-decrement--
-decrement--
-console.log(decrement--)
-
-//exponencial (**)
-console.log(3**2)
-
-*/
-
-/*
-//Operadores de Comparação
-
-//Ira comparar valores e retornar um Boolean como resposta a comparação
-
-let one = 1
-let two = 2
-
-// ==  igual
-console.log(one == 1)
-console.log(one == "1")
-
-// !=  diferente
-console.log(one != two)
-console.log(one != 1)
-console.log(one != "1")
-
-// === estritamente igual (Deve ser exatamente igual)
-console.log(one === "1") 
-console.log(one === 1)
-
-// !== estritamente diferente
-console.log(two === "2")
-console.log(two === 2)
-
-// >   Maior
-console.log(one > two)
-console.log(two > one)
-
-// >=  Maior igual
-console.log(one >= two)
-console.log(two >= 2)
-
-// <   Menor
-console.log( one < two)
-console.log(two < 2)
-
-// <=  Menor igual
-console.log(one < 1)
-console.log(two < one)
-*/
-
-/*
-//Operadoresde atribuição (Assignment)
-
-let x
-
-
-//assignment
-x = 1
-console.log(x)
-
-//addition assignment
-x += 2
-console.log(x)
-
-//subtraction assignment
-x -= 1
-console.log(x)
-
-//multiplication assignment
-x *= 2
-console.log(x)
-
-//division assignment
-x /= 2
-console.log(x)
-*/
-
-/*
-
-//Operadores lógicos (logical operators)
-
-// -2 valores booleans, quando verificados,
-// resultará em verdadeiro ou falso
-
-let pao = true
-let queijo = true
-
-// AND && (ambos)
-console.log(pao && queijo)
-
-// OR ||  (um ou outro)
-console.log(pao || queijo)
-
-// NOT ! (Negação)
-console.log(!pao)
-
-*/
-
-/*
-//Operador Condicional (Ternário)
-
-//Dependendo da condição, nós recebemos valores diferentes
-
-//Condição então valor 1 se não valor 2
-//condition ? value1 : value2 (Verifica as condições se o primeiro for verdadeiro o executa se não passa para o seguinte)
-
-
-//Exemplos
-
-//Café da manhã top
-let pao = true
-let queijo = false
-
-const niceBreakfast = pao || queijo ? 'Café Top' : 'Café ruim'
-
-console.log(niceBreakfast)
-
-//Maior de 18
-
-let age = 16
-const canDrive = age>= 18 ? 'can Driver' : "can't Driver"
-console.log(canDrive)
-
-*/
-
-/*
-//Operator de String (String operators)
-
-// comparison (comparação)
-console.log( 'a' == 'a')
-
-//concatenation (concatenação)
-//Retorna a união de duas Strings 
-let alpha = 'alpha'
-console.log(alpha + 'bet')
-*/
-
-/*
-// Type conversion(typecasting) vs Type coersion
-
-console.log(Number('9') + 5)
-
-/*
-	FALSY
-	Quando um valor é considerado false em contextos onde
-	um booleano é obrigatório (condicionais e loops)
-
-	false
-	0
-	-0
-	""
-	null
-	undefined
-	NaN
-	//Todos esses valores são considerados falsos
-*/
-
-//console.log( null ? 'verdadeiro' : 'falso')
-
-
-/*
-	TRUTHY
-	Quando um valor pe considerado true em contextos onde um
-	booleano é  obrigatório (condicionais de loops)
-
-	true
-	{}
-	[]
-	1
-	3.23
-	"0"
-	"false"
-	-1
-	Infinity
-	-Infinity
-*/
-//console.log( [] ? 'verdadeiro' : 'falso')
-
-
-
-// Operator precedence 
-/*
-	Precedência de operadores
-
-*grouping					()
-*negação e incremento		! ++ --
-*multiplicação e divisão	* / 
-*adição e subtração			+ -
-*relacional 				< <= > >=c
-*igualdade					== != === !==  
-*AND						&&
-*OR							||
-condicional					?:
-*assingnment (atribuição)	= += -= *=
-
-*/
+console.log('após ao try/catch')
