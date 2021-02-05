@@ -297,7 +297,7 @@ console.log(3**2)
 
 */
 
-
+/*
 //Operadores de Comparação
 
 //Ira comparar valores e retornar um Boolean como resposta a comparação
@@ -333,4 +333,155 @@ console.log(two >= 2)
 // <   Menor
 console.log( one < two)
 console.log(two < 2)
+
 // <=  Menor igual
+console.log(one < 1)
+console.log(two < one)
+*/
+
+/*
+//Operadoresde atribuição (Assignment)
+
+let x
+
+
+//assignment
+x = 1
+console.log(x)
+
+//addition assignment
+x += 2
+console.log(x)
+
+//subtraction assignment
+x -= 1
+console.log(x)
+
+//multiplication assignment
+x *= 2
+console.log(x)
+
+//division assignment
+x /= 2
+console.log(x)
+*/
+
+/*
+
+//Operadores lógicos (logical operators)
+
+// -2 valores booleans, quando verificados,
+// resultará em verdadeiro ou falso
+
+let pao = true
+let queijo = true
+
+// AND && (ambos)
+console.log(pao && queijo)
+
+// OR ||  (um ou outro)
+console.log(pao || queijo)
+
+// NOT ! (Negação)
+console.log(!pao)
+
+*/
+
+/*
+//Operador Condicional (Ternário)
+
+//Dependendo da condição, nós recebemos valores diferentes
+
+//Condição então valor 1 se não valor 2
+//condition ? value1 : value2 (Verifica as condições se o primeiro for verdadeiro o executa se não passa para o seguinte)
+
+
+//Exemplos
+
+//Café da manhã top
+let pao = true
+let queijo = false
+
+const niceBreakfast = pao || queijo ? 'Café Top' : 'Café ruim'
+
+console.log(niceBreakfast)
+
+//Maior de 18
+
+let age = 16
+const canDrive = age>= 18 ? 'can Driver' : "can't Driver"
+console.log(canDrive)
+
+*/
+
+/*
+//Operator de String (String operators)
+
+// comparison (comparação)
+console.log( 'a' == 'a')
+
+//concatenation (concatenação)
+//Retorna a união de duas Strings 
+let alpha = 'alpha'
+console.log(alpha + 'bet')
+*/
+
+/*
+// Type conversion(typecasting) vs Type coersion
+
+console.log(Number('9') + 5)
+
+/*
+	FALSY
+	Quando um valor é considerado false em contextos onde
+	um booleano é obrigatório (condicionais e loops)
+
+	false
+	0
+	-0
+	""
+	null
+	undefined
+	NaN
+	//Todos esses valores são considerados falsos
+*/
+
+//console.log( null ? 'verdadeiro' : 'falso')
+
+
+/*
+	TRUTHY
+	Quando um valor pe considerado true em contextos onde um
+	booleano é  obrigatório (condicionais de loops)
+
+	true
+	{}
+	[]
+	1
+	3.23
+	"0"
+	"false"
+	-1
+	Infinity
+	-Infinity
+*/
+//console.log( [] ? 'verdadeiro' : 'falso')
+
+
+
+// Operator precedence 
+/*
+	Precedência de operadores
+
+*grouping					()
+*negação e incremento		! ++ --
+*multiplicação e divisão	* / 
+*adição e subtração			+ -
+*relacional 				< <= > >=c
+*igualdade					== != === !==  
+*AND						&&
+*OR							||
+condicional					?:
+*assingnment (atribuição)	= += -= *=
+
+*/
