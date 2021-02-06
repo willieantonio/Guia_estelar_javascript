@@ -55,7 +55,7 @@ console.log(calculate(4, '+', 88))
 
 */
 
-
+/*
 //Sobre
 // throw
 
@@ -74,3 +74,62 @@ try{
 }
 
 console.log('após ao try/catch')
+
+*/
+
+/*
+//Estrutura de repetição
+// for
+
+
+for(let i = 100; i > 0; i--){
+    if(i === 5){
+        continue;
+    }
+    console.log(i)
+}
+*/
+
+/*
+//Estrutura de repetição
+//while
+
+let i = 0;
+while(i < 10){
+    console.log(i)
+    i++
+}
+
+*/
+
+/*
+//for .. of
+
+let name1 = 'willie'
+let names = ['João', 'Paulo', 'Pedro']
+
+for(let name1 of names){
+    console.log(name1)
+}
+
+for(let char of name1){
+    console.log(char)
+}
+
+*/
+
+
+//for ... in (loop em um objeto)
+
+let person ={
+    name1: 'John',
+    age: 30,
+    weight: 88.6
+}
+
+for(let propety in person){
+    console.log(propety) // Formas de acessar
+    console.log(person[propety]) // ou
+    console.log(person.name1) // ou
+    console.log(person["name1"]) // e essa
+}
