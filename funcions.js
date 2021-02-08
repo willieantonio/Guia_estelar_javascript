@@ -1,135 +1,107 @@
-console.log("Vamos os modulos 9, 10 e 11")
+//Modulo de Desafios... vamos codar....
 
-//if ... else (Controle de decisões)
-//let temperature = 36.2
+console.log("Modulo 11 -  Desafios Dev's")
 
-//if (temperature >= 37.5) {
-//    console.log('Febre Alta')
-//}else if(temperature < 37.5 && temperature >= 37){
-//    console.log('Febre Moderada')
-//}else {
-//    console.log('Saudável')
-//}
-
+//Primeiro Desafio
 /*
-let temperature = 37.1
-let hightTemperature = temperature >= 37.5
-let mediumTemperature = temperature < 37.5 && temperature >= 37
+    ### Transformar notas escolares 
 
-if(hightTemperature){
-    console.log('Febre Alta')
-}else if(mediumTemperature){
-    console.log('Febre Moderada')
-}else{
-    console.log('Saldavel')
+    Crie um algoritmo que transforme as notas do Sistema
+    numérico para sistema de notas em caracteres tipo A B C
+
+    Dados:
+
+    * de 90 para cima - A 
+    * entre 80 - 90   - B
+    * entre 70 - 79   - C
+    * entre 60 - 69   - D
+    * menor que  60   - F
+    
+ */
+/*
+function getNota(nota){ //Criar uma função para guardar os valores
+    let notaA = nota >= 90 && nota <= 100
+    let notaB = nota >= 80 && nota <= 89
+    let notaC = nota >= 70 && nota <= 79
+    let notaD = nota >= 60 && nota <= 69
+    let notaF = nota <= 60 && nota >= 0
+
+ let notaFinal;
+
+ if(notaA){
+     notaFinal = "A"
+ }else if(notaB){
+     notaFinal = "B"
+ }else if(notaC){
+     notaFinal = "C"
+ }else if(notaD){
+     notaFinal = "D"
+ }else if(notaF){
+     notaFinal = "F"
+ }else{
+     notaFinal = "Valor invalido"
+ }
+
+ return notaFinal
+
 }
+ //Usando o console.log para testar se a logica funcionou
+
+console.log(getNota(100))
+console.log(getNota(62))
+console.log(getNota(10))
+console.log(getNota(72))
+console.log(getNota(90))
+console.log(getNota(52))
+console.log(getNota(0))
+console.log(getNota(-62))
 
 */
 
-//switch (cases)
+//Segundo Desafio
 /*
-function calculate(number1, operator, number2) {
-    let result
+    ### Sistemas de Gastos Familiar
 
-    switch (operator) {
-        case '+':
-            result = number1 + number2
-            break
-        case '-':
-            result = number1 - number2
-            break
-        case '*':
-            result = number1 * number2
-            break
-        case '/':
-            result = number1 / number2
-            break
-        default:
-            console.log('não implementado')
-            break
+    Crie um objeto que possui 2 propriedades, ambas do tipo array:
+        * receitas[]
+        *despesas[]
+
+Agora, crie uma função que irá calcular o total de receitas e despesas e ira mostrar 
+uma mensagem se a família esta com saldo positivo ou negativo, seguido do valor d o saldo
+
+*/
+//Criando o Objeto com as array
+let family = {
+    incomes: [2500, 72.56, 556.96, 1589.56],
+    expenses: [350.65, 268, 176.96, 1453] 
+}
+
+function sum(array){
+    let total = 0;
+
+    for(let value of array){
+        total += value
     }
-    return result
+
+    return total
 }
 
-console.log(calculate(4, '+', 88))
+function calculateBalance(){ //função para calcular os totais
+    const calculateIncomes = sum(family.incomes)
+    const calculateExpenses = sum(family.expenses)
 
-*/
+    const total = calculateIncomes - calculateExpenses
 
-/*
-//Sobre
-// throw
+    const itsOk = total >= 0 
 
-function sayMyName(name = ''){
-    if(name === ''){
-        throw 'Nome é Obrigatório'
+    let balanceText = "negative"
+
+    if(itsOk){
+        balanceText = "positivo"
     }
-    console.log(name)
+
+    console.log(`Seu saldo é ${balanceText}: R$ ${total.toFixed(2)}`) //Formatando a saida de valores
+
 }
 
-//try...catch
-try{
-    sayMyName('Willie')
-}catch(e){
-    console.log(e)
-}
-
-console.log('após ao try/catch')
-
-*/
-
-/*
-//Estrutura de repetição
-// for
-
-
-for(let i = 100; i > 0; i--){
-    if(i === 5){
-        continue;
-    }
-    console.log(i)
-}
-*/
-
-/*
-//Estrutura de repetição
-//while
-
-let i = 0;
-while(i < 10){
-    console.log(i)
-    i++
-}
-
-*/
-
-/*
-//for .. of
-
-let name1 = 'willie'
-let names = ['João', 'Paulo', 'Pedro']
-
-for(let name1 of names){
-    console.log(name1)
-}
-
-for(let char of name1){
-    console.log(char)
-}
-
-*/
-
-
-//for ... in (loop em um objeto)
-
-let person ={
-    name1: 'John',
-    age: 30,
-    weight: 88.6
-}
-
-for(let propety in person){
-    console.log(propety) // Formas de acessar
-    console.log(person[propety]) // ou
-    console.log(person.name1) // ou
-    console.log(person["name1"]) // e essa
-}
+calculateBalance()
